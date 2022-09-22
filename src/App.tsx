@@ -3,6 +3,8 @@ import { IMovie } from './model/IMovie';
 import { discoverMovies } from './services/movieService';
 import { MoviesContext } from './services/context';
 
+import SearchForm from './components/SearchForm';
+import { Movie } from './components/Movie';
 function App() {
 
   useEffect(() => {
@@ -16,19 +18,11 @@ function App() {
   return (
     <MoviesContext.Provider value={{ movies, updateMovies: setMovies }}>
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className='bg-slate-800'>
+          <SearchForm/>
+          <Movie/>
+        </div>
+
       </div>
     </MoviesContext.Provider>
   );
