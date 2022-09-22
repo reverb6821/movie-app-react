@@ -39,10 +39,10 @@ function mapResult(res: any[]): IMovie[] {
     return {
       id,
       title,
-      date: release_date,
+      year: release_date,
       rating: vote_average,
       resume: overview,
-      picture: poster_path ? `${posterBaseUrl}${poster_path}` : undefined,
+      poster: poster_path ? `${posterBaseUrl}${poster_path}` : undefined,
     };
   });
 }

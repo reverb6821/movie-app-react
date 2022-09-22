@@ -1,8 +1,8 @@
 export interface IMovie {
     id: number;
-    date: string;
+    year: string;
     title: string;
     rating: number;
     resume: string;
-    picture?: string;
+    poster?: string;
   }
