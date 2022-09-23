@@ -5,12 +5,12 @@ export const Movie = () => {
     const { movies } = useContext(MoviesContext);
 
     return (
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap m-2 p-200'>
             {movies.map((movie) => (
-                <div className="py-12 sm:max-w-xl sm:mx-auto">
-                    <div className="bg-slate-600 shadow-lg max-h-80 sm:rounded-3xl p-8 flex space-x-8">
+                <div className="py-24 sm:max-w-xl sm:mx-auto">
+                    <div className="bg-slate-600 shadow-lg h-80 sm:rounded-3xl p-8 flex space-x-8">
                         <div className="h-48 overflow-visible w-1/2">
-                            <img className="rounded-3xl shadow-lg" src={movie.poster} alt={movie.title} />
+                            <img className="rounded-3xl shadow-lg " src={movie.poster} alt={movie.title} />
                         </div>
                         <div className="flex flex-col w-1/2 space-y-4">
                             <div className="flex justify-between items-start">
@@ -20,7 +20,7 @@ export const Movie = () => {
                             <div>
                                 <div className="text-xsm text-gray-400">{movie.year}</div>
                             </div>
-                            <p className=" text-sm text-gray-400 max-h-40 overflow-y-hidden">
+                            <p className=" text-sm text-gray-400 max-h-40 overflow-auto scrollbar-thin p-3 scrollbar-thumb-slate-800 scrollbar-track-gray-300  ">
                                 {movie.resume}
                             </p>
                         </div>
