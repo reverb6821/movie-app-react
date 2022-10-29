@@ -7,7 +7,7 @@ export const Movie = () => {
     return (
         <div className='flex flex-wrap m-2 p-200'>
             {movies.map((movie) => (
-                <div className="py-24 sm:max-w-xl sm:mx-auto">
+                <div className="py-24 sm:max-w-xl sm:mx-auto" key={movie.id}>
                     <div className="bg-slate-600 shadow-lg h-80 sm:rounded-3xl p-8 flex space-x-8">
                         <div className="h-48 overflow-visible w-1/2">
                             <img className="rounded-3xl shadow-lg " src={movie.poster} alt={movie.title} />
@@ -17,12 +17,10 @@ export const Movie = () => {
                                 <h2 className="text-3xl font-bold text-slate-200">{movie.title}</h2>
                                 <div className="bg-red-500 text-red-200 font-bold rounded-xl p-2">{movie.rating}</div>
                             </div>
-                            <div>
-                                <div className="text-xsm text-gray-400">{movie.year}</div>
-                            </div>
                             <p className=" text-sm text-gray-400 max-h-40 overflow-auto scrollbar-thin p-3 scrollbar-thumb-slate-800 scrollbar-track-gray-300  ">
                                 {movie.resume}
                             </p>
+
                         </div>
                     </div>
                 </div>

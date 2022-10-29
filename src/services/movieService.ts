@@ -5,7 +5,7 @@ const posterBaseUrl = "https://image.tmdb.org/t/p/w300";
 
 export function discoverMovies(): Promise<IMovie[]> {
   return fetch(
-    `${movieApiBaseUrl}/discover/movie?sort_by=popularity.desc&api_key=${process.env.REACT_APP_API_KEY}`
+    `${movieApiBaseUrl}/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
   )
     .then((res) => res.json())
     .then((response) => mapResult(response.results))
