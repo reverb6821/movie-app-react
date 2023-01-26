@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply mx-auto h-full w-full max-w-[1440px] bg-gray-700;
+    }
+  }
+
+  @layer components {
+
+    .heading-lg {
+      @apply text-app-heading-lg font-light;
+    }
+  
+    .heading-md {
+      @apply text-app-heading-md font-light;
+    }
+  
+    .heading-sm {
+      @apply text-app-heading-md font-medium;
+    }
+  
+    .heading-xs {
+      @apply text-app-heading-xs font-medium;
+    }
+  
+    .section-title {
+      @apply md:heading-lg text-xl font-light capitalize leading-none;
+    }
+  
+    .icon-nav {
+      @apply fill-app-greyish-blue transition duration-150 ease-linear hover:fill-app-red md:h-5 md:w-5;
+    }
+  
+    .active-link {
+      @apply fill-app-pure-white transition duration-150 ease-linear hover:fill-app-red md:h-5 md:w-5;
+    }
+    
+    .card-collection-wrapper {
+        @apply flex flex-col items-center gap-4 sm:gap-x-7 sm:gap-y-6 xl:gap-x-10 xl:gap-y-8 2xs:flex-row 2xs:flex-wrap 2xs:justify-between;
+      }
+    
+      .card-hover-animation {
+        @apply hover:animate-wiggle hover:even:animate-wiggle-opposite motion-reduce:transition-none motion-reduce:hover:transform-none;
+      }
+
+      @keyframes rotate {
+        0% {
+          -webkit-transform: -webkit-rotate(0deg) -webkit-scale(0.8);
+          -webkit-transform: rotate(0deg) scale(0.8);
+          -moz-transform: -webkit-rotate(0deg) scale(0.8);
+          transform: -webkit-rotate(0deg) scale(0.8);
+        }
+        50% {
+          -webkit-transform: -webkit-rotate(360deg) -webkit-scale(1.2);
+          -webkit-transform: rotate(360deg) scale(1.2);
+          -moz-transform: rotate(360deg) scale(1.2);
+          transform: rotate(360deg) scale(1.2);
+        }
+        100% {
+          -webkit-transform: -webkit-rotate(720deg) -webkit-scale(0.8);
+          -webkit-transform: rotate(720deg) scale(0.8);
+          -moz-transform: rotate(720deg) scale(0.8);
+          transform: rotate(720deg) scale(0.8);
+        }
+      }
+  }
+  
